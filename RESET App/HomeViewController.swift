@@ -1,25 +1,26 @@
 //
-//  SerenityViewController.swift
+//  HomeViewController.swift
 //  RESET App
 //
-//  Created by Omar Mendez on 5/25/20.
+//  Created by Omar Mendez on 5/24/20.
 //  Copyright © 2020 Omar Mendez and Anna Woolridge. All rights reserved.
 //
 
 import UIKit
 
-class SerenityViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // SETUP GRADIENT
+        // Do any additional setup after loading the view.
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [UIColor.init(red: 0.9295, green: 0.8549, blue: 0.8117, alpha: 1.0).cgColor, UIColor.init(red: 0.9215, green: 0.8313, blue: 0.8941, alpha: 1.0).cgColor]
+        gradientLayer.colors = [UIColor.init(red: 0.5529, green: 0.8353, blue: 0.8275, alpha: 1.0).cgColor, UIColor.init(red: 0.9216, green: 0.8549, blue: 0.8314, alpha: 1.0).cgColor]
         self.view.layer.insertSublayer(gradientLayer, at: 0)
-        //237 218 207
-        //235 212 228
+        //
+        //141 213 211
+        //235 218 212
     }
     
 
