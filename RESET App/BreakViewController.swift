@@ -14,6 +14,7 @@ class BreakViewController: UIViewController {
     var timeLeft = 20
     var countdownTimer = Timer()
     
+    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var countdownLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +26,14 @@ class BreakViewController: UIViewController {
         //181 156 218
         //224 220 228
         
+        //make the start button a circle button
+        startButton.layer.cornerRadius = 0.5 * startButton.bounds.size.width
+        startButton.clipsToBounds = true
+        startButton.layer.backgroundColor = UIColor.white.cgColor
         
         //What starting message do we want?
         //What interval of time do we want? 5 min? 10 min?
-        countdownLabel.text = "Take a \(timeLeft) second break. You deserve it"
+        countdownLabel.text = "Take a \(timeLeft) second break."
     }
     
     @IBAction func startTimer(_ sender: UIButton) {

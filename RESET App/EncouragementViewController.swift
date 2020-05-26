@@ -8,10 +8,11 @@
 
 import UIKit
 
-class EncouragementViewController: UIViewController {
+class EncouragementViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var imageHolder: UIImageView!
     
+    @IBOutlet weak var scroller: UIScrollView!
     @IBOutlet weak var moreButton: UIButton!
     var photos = [String]()
     var randphoto = ""
@@ -22,21 +23,28 @@ class EncouragementViewController: UIViewController {
         gradientLayer.frame = self.view.bounds
         //104 143 146
         //168 209 175
-        gradientLayer.colors = [UIColor.init(red: 0.4078, green: 0.5607, blue: 0.5725, alpha: 1.0).cgColor, UIColor.init(red: 0.6588, green: 0.8196, blue: 0.6863, alpha: 1.0).cgColor]
+        //234 244 193
+        gradientLayer.colors = [UIColor.init(red: 0.9215, green: 0.9568, blue: 0.7568 , alpha: 1.0).cgColor, UIColor.init(red: 0.6588, green: 0.8196, blue: 0.6863, alpha: 1.0).cgColor]
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
+        /*
+        self.scroller.minimumZoomScale = 1.0
+        self.scroller.maximumZoomScale = 2.0
+        */
         
         //Button design
-        //moreButton.layer.borderColor = CGColor(
-        moreButton.layer.borderWidth = 0.9
+        moreButton.layer.borderColor = UIColor.white.cgColor
+        moreButton.layer.borderWidth = 4.0
         
-        // Do any additional setup after loading the view.
-        photos = ["puppy1", "puppy2", "puppy3", "puppy4"]
+        photos = ["puppy1", "puppy2", "puppy3", "puppy4", "smile1", "smile2", "smile3", "smile4", "smile5", "smile6", "smile7", "smile8", "smile9", "smile10", "smile11"]
         loadAnotherPhoto(self)
-        //randphoto = photos[Int.random(in: 0 ..< photos.count-1)]
-        //imageHolder.image = UIImage(named:  randphoto)
+
     }
-    
+    /*
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.imageHolder
+    }
+    */
     
     @IBAction func loadAnotherPhoto(_ sender: Any) {
         randphoto = photos[Int.random(in: 0 ..< photos.count-1)]

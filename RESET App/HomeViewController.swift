@@ -10,6 +10,9 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var enccourageButton: UIButton!
+    @IBOutlet weak var serenityButton: UIButton!
+    @IBOutlet weak var breakButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +24,15 @@ class HomeViewController: UIViewController {
         //
         //141 213 211
         //235 218 212
+        
+        enccourageButton.layer.borderColor = UIColor.white.cgColor
+        serenityButton.layer.borderColor = UIColor.white.cgColor
+        breakButton.layer.borderColor = UIColor.white.cgColor
+        
+        enccourageButton.layer.borderWidth = 3.0
+        serenityButton.layer.borderWidth = 3.0
+        breakButton.layer.borderWidth = 3.0
+
     }
     
 
