@@ -40,7 +40,7 @@ class EncouragementViewController: UIViewController, UIScrollViewDelegate {
         //moreButton.layer.backgroundColor=UIColor.darkGray.cgColor
         //moreButton.layer.borderWidth = 4.0
         
-        photos = ["puppy1", "puppy2", "puppy3", "puppy4", "smile1", "smile2", "smile3", "smile4", "smile5", "smile6", "smile7", "smile8", "smile9", "smile10", "smile11"]
+        photos = ["puppy1", "puppy2", "puppy3", "puppy4", "smile1", "smile2", "smile3", "smile4", "smile5", "smile6", "smile7", "smile8", "smile9", "smile10", "smile11", "smile12", "smile13", "smile14", "smile15"]
         loadAnotherPhoto(self)
 
     }
