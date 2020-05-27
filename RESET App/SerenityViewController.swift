@@ -7,12 +7,19 @@
 //
 
 import UIKit
-
 class SerenityViewController: UIViewController {
-
+    @IBOutlet weak var puppyimage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+      let animation = CAKeyframeAnimation(keyPath: "transform.scale")
+
+         animation.values = [1.0, 1.2, 1.0]
+         animation.keyTimes = [0, 0.5, 1]
+         animation.duration = 1.5
+         animation.repeatCount = Float.infinity
+         view.layer.add(animation, forKey: nil)
         // SETUP GRADIENT
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
