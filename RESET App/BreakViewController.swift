@@ -11,7 +11,7 @@ import UIKit
 class BreakViewController: UIViewController {
 
 
-    var timeLeft = 20
+    var timeLeft = 600
     var countdownTimer = Timer()
     
     @IBOutlet weak var startButton: UIButton!
@@ -33,7 +33,7 @@ class BreakViewController: UIViewController {
         
         //What starting message do we want?
         //What interval of time do we want? 5 min? 10 min?
-        countdownLabel.text = "Take a \(timeLeft) second break."
+        countdownLabel.text = "Take a 10 minute break"
     }
     
     @IBAction func startTimer(_ sender: UIButton) {
@@ -43,7 +43,7 @@ class BreakViewController: UIViewController {
     
     @objc func countMethod(){
         timeLeft -= 1
-        countdownLabel.text = "\(timeLeft) seconds left"
+        countdownLabel.text = "\(timeLeft/60) minutes \(timeLeft%60) seconds left"
         
         if timeLeft <= 0 {
             countdownTimer.invalidate()

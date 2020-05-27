@@ -16,6 +16,9 @@ class EncouragementViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var moreButton: UIButton!
     var photos = [String]()
     var randphoto = ""
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,8 +36,9 @@ class EncouragementViewController: UIViewController, UIScrollViewDelegate {
         */
         
         //Button design
-        moreButton.layer.borderColor = UIColor.white.cgColor
-        moreButton.layer.borderWidth = 4.0
+        //moreButton.layer.borderColor = UIColor.white.cgColor
+        //moreButton.layer.backgroundColor=UIColor.darkGray.cgColor
+        //moreButton.layer.borderWidth = 4.0
         
         photos = ["puppy1", "puppy2", "puppy3", "puppy4", "smile1", "smile2", "smile3", "smile4", "smile5", "smile6", "smile7", "smile8", "smile9", "smile10", "smile11"]
         loadAnotherPhoto(self)

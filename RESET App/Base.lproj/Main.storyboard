@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dAv-ZF-gUz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,42 +22,46 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|for educators|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYk-FO-3IB">
-                                <rect key="frame" x="138" y="200" width="138" height="27"/>
+                                <rect key="frame" x="138" y="228" width="138" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeK-fe-J4D">
-                                <rect key="frame" x="68" y="526" width="293" height="51"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
-                                <state key="normal" title="Serenity?">
-                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeK-fe-J4D">
+                                <rect key="frame" x="68" y="546" width="293" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <state key="normal" title="Serenity">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="e7X-js-fK1" kind="show" id="zoh-KP-0v6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you need right now?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCj-oT-UX7">
-                                <rect key="frame" x="80" y="315" width="254" height="26"/>
+                                <rect key="frame" x="80" y="343" width="254" height="26"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhD-0D-eDh">
-                                <rect key="frame" x="68" y="422" width="293" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                <state key="normal" title="Encouragement?">
-                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhD-0D-eDh">
+                                <rect key="frame" x="68" y="450" width="293" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="24"/>
+                                <state key="normal" title="Encouragement">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="cuH-pd-6OO" kind="show" id="ehf-8j-zCT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ied-2w-i3a">
-                                <rect key="frame" x="68" y="633" width="293" height="51"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
-                                <state key="normal" title="A Break?">
-                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ied-2w-i3a">
+                                <rect key="frame" x="68" y="643" width="293" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <state key="normal" title="A Break">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="JEt-YD-zy7" kind="show" id="A7n-5z-aYW"/>
@@ -104,8 +108,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WP8-AP-2xz">
-                                <rect key="frame" x="98" y="778" width="219" height="50"/>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WP8-AP-2xz">
+                                <rect key="frame" x="55" y="778" width="326" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="More Encouragement?">
                                     <color key="titleColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -151,8 +157,8 @@
                             <constraint firstItem="7f2-LT-PXq" firstAttribute="trailing" secondItem="dAD-LK-RCn" secondAttribute="trailing" constant="33" id="cs7-pt-UhL"/>
                             <constraint firstItem="cIM-30-yLZ" firstAttribute="top" secondItem="dAD-LK-RCn" secondAttribute="bottom" constant="35" id="eRZ-QO-hl1"/>
                             <constraint firstItem="cIM-30-yLZ" firstAttribute="leading" secondItem="7f2-LT-PXq" secondAttribute="leading" constant="11" id="hfM-lU-zSp"/>
-                            <constraint firstItem="7f2-LT-PXq" firstAttribute="trailing" secondItem="WP8-AP-2xz" secondAttribute="trailing" constant="97" id="iwi-Ds-fyp"/>
-                            <constraint firstItem="WP8-AP-2xz" firstAttribute="leading" secondItem="7f2-LT-PXq" secondAttribute="leading" constant="98" id="mJ4-yX-yj6"/>
+                            <constraint firstItem="7f2-LT-PXq" firstAttribute="trailing" secondItem="WP8-AP-2xz" secondAttribute="trailing" constant="33" id="iwi-Ds-fyp"/>
+                            <constraint firstItem="WP8-AP-2xz" firstAttribute="leading" secondItem="7f2-LT-PXq" secondAttribute="leading" constant="55" id="mJ4-yX-yj6"/>
                             <constraint firstItem="WP8-AP-2xz" firstAttribute="top" secondItem="cIM-30-yLZ" secondAttribute="bottom" constant="41" id="q7O-2k-8OC"/>
                             <constraint firstItem="cIM-30-yLZ" firstAttribute="trailing" secondItem="7f2-LT-PXq" secondAttribute="trailing" constant="-11" id="qH2-iq-Scy"/>
                             <constraint firstItem="dAD-LK-RCn" firstAttribute="leading" secondItem="7f2-LT-PXq" secondAttribute="leading" constant="55" id="rC2-sq-TVz"/>
@@ -193,7 +199,9 @@
                                     <constraint firstAttribute="height" constant="180" id="3Iw-mk-FfS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="START"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="startTimer:" destination="JEt-YD-zy7" eventType="touchUpInside" id="abI-pp-9aq"/>
                                 </connections>
@@ -244,17 +252,20 @@
                                 <color key="textColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="puppy1" translatesAutoresizingMaskIntoConstraints="NO" id="BCQ-5b-Hlw">
-                                <rect key="frame" x="77" y="251" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCA-OC-QL9">
+                                <rect key="frame" x="165" y="433" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" title="BREATHE IN">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="yeq-k4-AhN"/>
                     </view>
                     <navigationItem key="navigationItem" id="TiO-U7-5kR"/>
                     <connections>
-                        <outlet property="puppyimage" destination="BCQ-5b-Hlw" id="IZU-yh-oLb"/>
+                        <outlet property="breatheButton" destination="nCA-OC-QL9" id="kpd-i1-TC6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDh-pm-Dh1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -280,7 +291,4 @@
             <point key="canvasLocation" x="1700.0000000000002" y="121.875"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="puppy1" width="1280" height="1024"/>
-    </resources>
 </document>

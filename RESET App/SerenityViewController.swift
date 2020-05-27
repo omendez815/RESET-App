@@ -8,18 +8,26 @@
 
 import UIKit
 class SerenityViewController: UIViewController {
-    @IBOutlet weak var puppyimage: UIImageView!
+
     
+    @IBOutlet weak var breatheButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.addPulse))
+        tapGestureRecognizer.numberOfTouchesRequired = 1
+        breatheButton.isUserInteractionEnabled = true
+        breatheButton.addGestureRecognizer(tapGestureRecognizer)
 
-      let animation = CAKeyframeAnimation(keyPath: "transform.scale")
+      /*let animation = CAKeyframeAnimation(keyPath: "transform.scale")
 
          animation.values = [1.0, 1.2, 1.0]
          animation.keyTimes = [0, 0.5, 1]
          animation.duration = 1.5
          animation.repeatCount = Float.infinity
-         view.layer.add(animation, forKey: nil)
+         view.layer.add(animation, forKey: nil)*/
+        
+        
         // SETUP GRADIENT
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
@@ -29,6 +37,13 @@ class SerenityViewController: UIViewController {
         //235 212 228
     }
     
+    @objc func addPulse(){
+        let pulse = Pulsing(numberOfPulses: 20, radius: 110, position: breatheButton.center)
+        pulse.animationDuration = 0.8
+        pulse.backgroundColor = UIColor.green.cgColor
+        
+        self.view.layer.insertSublayer(pulse, below: breatheButton.layer)
+    }
 
     /*
     // MARK: - Navigation
