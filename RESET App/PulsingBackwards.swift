@@ -1,15 +1,14 @@
 //
-//  Pulsing.swift
+//  PulsingBackwards.swift
 //  RESET App
 //
-//  Created by Omar Mendez on 5/27/20.
+//  Created by Omar Mendez on 5/28/20.
 //  Copyright © 2020 Omar Mendez and Anna Woolridge. All rights reserved.
 //
 
 import UIKit
 
-class Pulsing: CALayer {
-
+class PulsingBackwards: CALayer {
     var animationGroup = CAAnimationGroup()
     
     var initialPulseScale:Float = 0
@@ -72,7 +71,7 @@ class Pulsing: CALayer {
     func createOpacityAnimation()->CAKeyframeAnimation{
         let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
         opacityAnimation.duration = animationDuration
-        opacityAnimation.values = [0.4, 0.8, 0.0]
+        opacityAnimation.values = [0.2, 0.4, 0.8]
         opacityAnimation.keyTimes = [0, 0.2, 1]//fracions of total duration??
         return opacityAnimation
     }
@@ -84,6 +83,6 @@ class Pulsing: CALayer {
         let defaultCurve = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
         self.animationGroup.timingFunction = defaultCurve
         
-        self.animationGroup.animations = [createScaleAnimation(),  createOpacityAnimation()]
+        self.animationGroup.animations = [ createBackwardsAnimations(), createOpacityAnimation()]
     }
 }

@@ -11,13 +11,16 @@ class SerenityViewController: UIViewController {
 
     
     @IBOutlet weak var breatheButton: UIButton!
+   
+    var timeLeft = 20
+    var countdownTimer = Timer()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.addPulse))
+       /* let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.addPulse))
         tapGestureRecognizer.numberOfTouchesRequired = 1
         breatheButton.isUserInteractionEnabled = true
-        breatheButton.addGestureRecognizer(tapGestureRecognizer)
+        breatheButton.addGestureRecognizer(tapGestureRecognizer)*/
 
       /*let animation = CAKeyframeAnimation(keyPath: "transform.scale")
 
@@ -37,14 +40,47 @@ class SerenityViewController: UIViewController {
         //235 212 228
     }
     
+    @IBAction func pressBreath(_ sender: UIButton) {
+        
+         var countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countMethod), userInfo: nil, repeats: true)
+        
+    }
+    @objc func countMethod(){
+           timeLeft -= 1
+           //countdownLabel.text = "\(timeLeft/60) minutes \(timeLeft%60) seconds left"
+           
+        if timeLeft % 8 == 0{
+            addPulse()
+            breatheButton.setTitle("BREATHE IN", for: .normal)
+        }
+        else if timeLeft % 4 == 0{
+            addBackPulse()
+            breatheButton.setTitle("BREATHE OUT", for: .normal)
+        }
+        
+           if timeLeft <= 0 {
+               countdownTimer.invalidate()
+               //countdownTimer = nil
+               //countdownLabel.text = "DONE!"
+           }
+       }
     @objc func addPulse(){
-        let pulse = Pulsing(numberOfPulses: 20, radius: 110, position: breatheButton.center)
+        let pulse = Pulsing(numberOfPulses: 1, radius: 200, position: breatheButton.center)
         pulse.animationDuration = 0.8
         pulse.backgroundColor = UIColor.green.cgColor
         
         self.view.layer.insertSublayer(pulse, below: breatheButton.layer)
+        
+        
+    
     }
-
+    @objc func addBackPulse(){
+        
+        let pulse2 = PulsingBackwards(numberOfPulses: 1, radius: 200, position: breatheButton.center)
+        pulse2.animationDuration = 0.8
+        //pulse2.backgroundColor = UIColor.blue.cgColor
+        self.view.layer.insertSublayer(pulse2, below: breatheButton.layer)
+    }
     /*
     // MARK: - Navigation
 

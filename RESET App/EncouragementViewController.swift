@@ -40,7 +40,7 @@ class EncouragementViewController: UIViewController, UIScrollViewDelegate {
         //moreButton.layer.backgroundColor=UIColor.darkGray.cgColor
         //moreButton.layer.borderWidth = 4.0
         
-        photos = ["puppy1", "puppy2", "puppy3", "puppy4", "smile1", "smile2", "smile3", "smile4", "smile5", "smile6", "smile7", "smile8", "smile9", "smile10", "smile11"]
+        photos = ["puppy1", "puppy2", "puppy3", "puppy4", "smile1", "smile2", "smile3", "smile4", "smile5", "smile6", "smile7", "smile8", "smile9", "smile10", "smile11", "anna1", "anna2", "anna3", "anna4", "anna5", "anna6", "anna7", ]
         loadAnotherPhoto(self)
 
     }
@@ -51,7 +51,7 @@ class EncouragementViewController: UIViewController, UIScrollViewDelegate {
     */
     
     @IBAction func loadAnotherPhoto(_ sender: Any) {
-        randphoto = photos[Int.random(in: 0 ..< photos.count-1)]
+        randphoto = photos[Int.random(in: 0 ..< photos.count)]
         imageHolder.image = UIImage(named:  randphoto)
     }
     

@@ -245,22 +245,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serenity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-R7-2G0">
-                                <rect key="frame" x="155" y="135" width="105" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serenity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-R7-2G0">
+                                <rect key="frame" x="155" y="146" width="105" height="39"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCA-OC-QL9">
-                                <rect key="frame" x="165" y="433" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="BREATHE IN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCA-OC-QL9">
+                                <rect key="frame" x="155" y="433" width="105" height="30"/>
+                                <state key="normal" title="START">
                                     <color key="titleColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressBreath:" destination="e7X-js-fK1" eventType="touchUpInside" id="dpx-ff-UNV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nCA-OC-QL9" firstAttribute="top" secondItem="m0e-R7-2G0" secondAttribute="bottom" constant="248" id="QyL-yM-vdb"/>
+                            <constraint firstItem="yeq-k4-AhN" firstAttribute="trailing" secondItem="nCA-OC-QL9" secondAttribute="trailing" constant="154" id="RTs-3r-Anc"/>
+                            <constraint firstItem="m0e-R7-2G0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nCA-OC-QL9" secondAttribute="leading" id="Sw5-gA-NO4"/>
+                            <constraint firstItem="yeq-k4-AhN" firstAttribute="bottom" secondItem="nCA-OC-QL9" secondAttribute="bottom" constant="399" id="TYG-U8-ybF"/>
+                            <constraint firstItem="yeq-k4-AhN" firstAttribute="trailing" secondItem="m0e-R7-2G0" secondAttribute="trailing" constant="154" id="v3n-v5-y0o"/>
+                            <constraint firstItem="nCA-OC-QL9" firstAttribute="leading" secondItem="yeq-k4-AhN" secondAttribute="leading" constant="155" id="zgw-aY-CEg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yeq-k4-AhN"/>
                     </view>
                     <navigationItem key="navigationItem" id="TiO-U7-5kR"/>
@@ -270,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDh-pm-Dh1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297" y="852"/>
+            <point key="canvasLocation" x="1295.6521739130435" y="851.78571428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Juc-9C-2jd">
